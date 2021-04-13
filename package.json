@@ -1,0 +1,23 @@
+{
+  "name": "google-books-finder",
+  "version": "1.0.0",
+  "description": "Google Books Finder - MERN Project",
+  "main": "server.js",
+  "scripts": {
+    "client-install": "npm install --prefix client",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "concurrently": "^6.0.2",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
