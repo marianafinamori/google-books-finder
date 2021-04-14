@@ -1,0 +1,93 @@
+.coverContainer {
+    height: 200px;
+}
+
+img {
+    height: 100%
+}
+
+.googleBtn,
+.saveBtn,
+.deleteBtn {
+    line-height: 35px;
+    box-shadow: none;
+    background-color: transparent;
+    display: inline-block;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 0.1em;
+    border: 2px solid #250e0e;
+    color: #250e0e;
+    margin: 1%;
+    
+}
+
+.googleBtn {
+    left: 25%;
+}
+
+.googleBtn:hover {
+    background-color: #c3d8ce;
+}
+.saveBtn:hover {
+    background-color: #ece8d3;
+}
+
+
+.divSummary {
+    background-color: #cfcfcf;
+    color: #250e0e;
+}
+
+.row {
+    width: 100%;
+    margin-top: 3%;
+    text-align: center;
+}
+
+.coverContainer {
+    max-height: 100%;
+    vertical-align: middle;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.divCoverName {
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.book-left {
+    background-color: #d7ebf6;
+}
+
+.title {
+    font-family: 'georgia-italic', sans-serif;
+    font-style: italic;
+    color: #250e0e;
+    margin-top: 4%;
+}
+
+.divSummary {
+    font-family: 'georgia-italic', sans-serif;
+    font-style: italic;
+    text-align: center;
+    padding: 2%;
+    margin-left: 1em;
+}
+
+.author {
+    margin-right: 0.8em;
+}
+
+.book-title-left, .book-title-right {
+    font-family: 'Bebas Neue', cursive;
+    font-style: normal;
+}
+
+.book-title-left {
+    border: 1px solid green;
+    margin-top: 5%;
+}

@@ -1,0 +1,23 @@
+.no-books {
+    text-align: center;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Playfair Display", serif;
+    color: #1a1a1a;
+    font-size: 1.5em;
+    border: 1px solid #250e0e;
+    width: 50%;
+    padding-top: 0.3em;
+    padding-bottom: 0.5em;
+}
+
+.page-title {
+    border-top: 1px solid #250e0e;
+    border-bottom: 1px solid #250e0e;
+    text-align: center;
+    margin-top: 1%;
+    font-family: "Playfair Display", serif;
+    color: #1a1a1a;
+    font-size: 1.2em;
+}

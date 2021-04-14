@@ -1,0 +1,26 @@
+.form {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#bookName {
+    width: 25%;
+    height: 50px;
+}
+
+.search-btn {
+    height: 48px;
+    width: 100px;
+    margin-left: 10px;
+    border: 3x solid black;
+    background-color: transparent;
+    color: black;
+    box-shadow: none;
+}
+
+.search-btn:hover {
+    background-color: #1a1a1a;
+    opacity: 0.9;
+    color: white;
+    text-decoration: underline;
+}
