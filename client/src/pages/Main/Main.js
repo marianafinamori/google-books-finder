@@ -3,10 +3,10 @@ import Navbar from '../../components/Navbar/Navbar'
 import Form from '../../components/Form/Form'
 import Books from '../../components/Books/Books'
 import API from '../../utils/API'
-import './Home.css'
+import './Main.css'
 
 
-const Home = () => {
+const Main = () => {
   let [query, setQuery] = useState("")
   let [books, setBooks] = useState([])
   let [command, setCommand] = useState()
@@ -17,7 +17,6 @@ const Home = () => {
   const getInput = (event) => {
     setFailure(0)
     let input = event.target.value
-    console.log(input)
     setName(input.toUpperCase())
     query = input.toLowerCase().replace(/\s/g,'')
     setQuery(query)
@@ -33,7 +32,7 @@ const Home = () => {
         console.log(res.data.length)
         res.data.length!==0 ? setData(res) : setFailure(1)
       })
-      setTimeout(resetForm(), 4000)
+      setTimeout(resetForm(), 2000)
   }
   
   //Set data coming from DB
@@ -92,13 +91,11 @@ const Home = () => {
   //Get books from DB
   useEffect(() => {
     getBooks(command)
-    // Clean useEffect
+    //Clean useEffect
     return () => {
       console.log("Clean useEffect")
     }
   }, [command])
-
- 
 
   // Get books from mongoDB 
   const getBooks = (command) => {
@@ -155,4 +152,4 @@ const Home = () => {
   )
 }
 
-  export default Home;
+  export default Main;

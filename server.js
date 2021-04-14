@@ -9,7 +9,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // If deployed, use the deployed database. Otherwise use the local economist database
-const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/googlebookshooks";
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/googlebooksfinder";
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true});
 const checkdb = mongoose.connection;
 
@@ -24,7 +24,7 @@ checkdb.on("error", err => {
 })
 
 // Connect to the Mongo DB
-mongoose.connect("mongodb://localhost/googlebookshooks", { useNewUrlParser: true });
+mongoose.connect("mongodb://localhost/googlebooksfinder", { useNewUrlParser: true });
 
 // Use routes
 app.use('/api/books', books)
