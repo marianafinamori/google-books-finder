@@ -2,7 +2,7 @@
 ## MERN Project
 
 ### Description
-Google Books Finder is an application where users can search books from Google Books and save their favorites ones. 
+Google Books Finder is an application where users can search books from Google Books and save their favorite ones. 
 
 ### Technologies
 MongoDB, Express, React Hooks, Node, CSS
