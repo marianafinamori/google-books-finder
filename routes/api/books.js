@@ -20,7 +20,7 @@ router.get("/:query", (req, res) => {
                 } else {
                     res.json(books)
                 }
-            })}, 3000)
+            })}, 2500)
 
         }
     })

@@ -29,6 +29,7 @@ const Main = () => {
     console.log(`THIS IS THE ${query}`)
     API.googleBooks(query) 
       .then(res => {
+        setCommand("all")
         console.log(res.data.length)
         res.data.length!==0 ? setData(res) : setFailure(1)
       })
@@ -69,7 +70,7 @@ const Main = () => {
     let id = event.target.id
     API.saveBook(id)
       .then(res=> {
-        alert('saved')
+        // alert('saved')
         setCommand('all')
         API.getBooksDB(command)
           .then(res => {
