@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const books = require('./routes/api/books')
+const path = require('path')
 const PORT = process.env.PORT || 5000;
 const app = express();
 
@@ -9,7 +10,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // If deployed, use the deployed database. Otherwise use the local economist database
-const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/googlebooksfinder";
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/googlebookshooks";
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true});
 const checkdb = mongoose.connection;
 
@@ -24,10 +25,20 @@ checkdb.on("error", err => {
 })
 
 // Connect to the Mongo DB
-mongoose.connect("mongodb://localhost/googlebooksfinder", { useNewUrlParser: true });
+mongoose.connect("mongodb://localhost/googlebookshooks", { useNewUrlParser: true });
 
 // Use routes
 app.use('/api/books', books)
+
+// Serve static assets if in production
+if (process.env.NODE_ENV === "production") {
+  // Set static folder
+  app.use(express.static('client/build'))
+
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
+  })
+}
 
 //START SERVER
 app.listen(PORT, function() {

@@ -1,95 +1,10 @@
-.coverContainer {
-    height: 200px;
-}
-
-img {
-    height: 100%
-}
-
-.googleBtn,
-.saveBtn,
-.deleteBtn {
-    line-height: 35px;
-    box-shadow: none;
-    background-color: transparent;
-    display: inline-block;
-    text-align: center;
-    font-family: 'Open Sans', sans-serif;
-    letter-spacing: 0.1em;
-    border: 2px solid #250e0e;
-    color: #250e0e;
-    margin: 1%;
-    
-}
-
-.googleBtn {
-    left: 25%;
-}
-
-.googleBtn:hover {
-    background-color: #c3d8ce;
-}
-.saveBtn:hover {
-    background-color: #ece8d3;
-}
-
-
-.divSummary {
-    background-color: #cfcfcf;
-    color: #250e0e;
-}
-
-.row {
-    width: 100%;
+.main {
+    display: flex;
+    flex-wrap: wrap;
     margin-top: 3%;
-    text-align: center;
-}
-
-.coverContainer {
-    max-height: 100%;
-    vertical-align: middle;
-    margin-left: auto;
-    margin-right: auto;
-
-}
-
-.divCoverName {
-    margin-left: auto;
-    margin-right: auto;
-
-}
-
-.book-left {
-    background-color: #d7ebf6;
-}
-
-.title {
-    font-family: 'georgia-italic', sans-serif;
-    font-style: italic;
-    color: #250e0e;
-    margin-top: 4%;
-}
-
-.divSummary {
-    font-family: 'georgia-italic', sans-serif;
-    font-style: italic;
-    text-align: center;
-    padding: 2%;
-    margin-left: 1em;
-}
-
-.author {
-    margin-right: 0.8em;
-}
-
-.book-title-left, .book-title-right {
-    font-family: 'Bebas Neue', cursive;
-    font-style: normal;
-}
-
-.book-title-left {
-    border: 1px solid green;
-    margin-top: 5%;
+    align-items: stretch;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .fade-in-div {
@@ -124,20 +39,73 @@ img {
     100% {opacity:1;}
   }
 
-/* .fade-enter {
-    opacity: 0.01;
+.book-left {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #d7ebf6;
+    flex:1;
 }
 
-.fade-enter-active {
-    opacity: 1;
-    transition: opacity 1000ms ease-in;
+img {
+    height: 100%
 }
 
-.fade-exit {
-    opacity: 1;
+.box-right {
+    background-color: #cfcfcf;
+    color: #250e0e;
+    flex: 2;
+    font-family: 'georgia-italic', sans-serif;
+    font-style: italic;
+    text-align: center;
+    padding: 3%;
+    /* margin-left: 1em; */
 }
 
-.fade-exit-active {
-    opacity: 0.01;
-    transition: opacity 1000ms ease-in;
-} */
+.book-title {
+    font-family: 'Bebas Neue', cursive;
+    font-style: normal;
+}
+
+.author {
+    margin-right: 0.8em;
+}
+
+.google-btn,
+.save-btn,
+.delete-btn {
+    line-height: 35px;
+    box-shadow: none;
+    background-color: transparent;
+    display: inline-block;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 0.1em;
+    border: 2px solid #250e0e;
+    color: #250e0e;
+    margin: 1%;
+    
+}
+
+.google-btn {
+    left: 25%;
+}
+
+.google-btn:hover,
+.save-btn:hover, 
+.delete-btn:hover
+ {
+    background-color: #FBFCFC;
+}
+
+@media screen and (max-width: 640px) {
+    .box-left,
+    .box-right {
+        flex-basis: 100%
+    }
+}
+
+
+
+
+

@@ -10,8 +10,8 @@ const Navbar = ({ searchLink, saveLink }) => {
       </header>
       <div className="nav-container">
         <ul className="nav justify-content-center">
-            <li className="link-container nav-item nav-link" onClick={searchLink}>SEARCH</li>
-            <li className="link-container nav-item nav-link" onClick={saveLink}>SAVED</li>  
+            <li className="nav-item nav-link" onClick={searchLink}>SEARCH</li>
+            <li className="nav-item nav-link" onClick={saveLink}>SAVED</li>  
         </ul>
       </div>
     </div>
